@@ -63,11 +63,15 @@ const tools = computed<ToolCategory[]>(() => [
           <div>
             IT-Tools
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
+            <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
               v{{ version }}
+              京ICP备2023035538号
+            </c-link> -->
+            <c-link target="_blank" rel="noopener" :href="`https://beian.miit.gov.cn/`">
+              京ICP备2023035538号
             </c-link>
 
-            <template v-if="commitSha && commitSha.length > 0">
+            <!-- <template v-if="commitSha && commitSha.length > 0">
               -
               <c-link
                 target="_blank"
@@ -77,12 +81,12 @@ const tools = computed<ToolCategory[]>(() => [
               >
                 {{ commitSha }}
               </c-link>
-            </template>
+            </template> -->
           </div>
           <div>
             © {{ new Date().getFullYear() }}
-            <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh">
-              Corentin Thomasset
+            <c-link target="_blank" rel="noopener" href="https://github.com/9ao2hen">
+              9ao2hen
             </c-link>
           </div>
         </div>
@@ -120,7 +124,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
+        <!-- <c-tooltip position="bottom" :tooltip="$t('home.support')">
           <c-button
             round
             href="https://www.buymeacoffee.com/cthmsst"
@@ -133,7 +137,7 @@ const tools = computed<ToolCategory[]>(() => [
             {{ $t('home.buyMeACoffee') }}
             <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
       </div>
       <slot />
     </template>
